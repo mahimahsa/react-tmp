@@ -3,11 +3,11 @@ import ReactDOM from 'react-dom'
 import { createStore, applyMiddleware } from 'redux'
 import thunk from 'redux-thunk'
 import { Provider } from 'react-redux'
-import reducers from './reduxapp/reducers'
+import reducers from './redux/reducers/index'
 import { composeWithDevTools } from 'redux-devtools-extension'
 import App from './components/App'
 //import "src/assets/css/main.css"
-import * as serviceWorkerRegistration from './serviceWorkerRegistration';
+// import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';
 /*import './assets/css/iran-sans.css';*/
 
@@ -18,9 +18,10 @@ ReactDOM.render(
         <App />
     </Provider>,
     document.getElementById('root')
+    
 )
 
-serviceWorkerRegistration.unregister();
+// serviceWorkerRegistration.unregister();
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
