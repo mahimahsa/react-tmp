@@ -12,8 +12,8 @@ function SignUp() {
     const [mobileNumber, setMobileNumber] = useState();
     const dispatch = useDispatch();
 
-    const call = async(request, url) => {
-        dispatch(await signUpAction(request,url))
+    const call =async (request) => {
+        dispatch(await signUpAction(request))
     }
 
     const handleSubmit = () => {
@@ -21,11 +21,10 @@ function SignUp() {
             firstName,
             lastName,
             email,
-            mobileNumber
+            mobileNumber,
         }
-        let url = 'http://localhost:8081/customer/addCustomer';
-    
-        call(request, url);
+        
+        call(request);
     }
 
     return (
