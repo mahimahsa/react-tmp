@@ -1,17 +1,20 @@
 
-export  const signIn =(state='', action)=>{
-
+const initState= {status: "NO_LOGIN", loginInfo:[]}
+const signIn =(state=initState, action)=>{
+console.log(action.type)
+console.log(action.payload)
     switch (action.type) {
         case "LOGIN":
             return({
-                ...state,
-                status: 'LOGIN'
+                status: 'LOGIN',
+                loginInfo: action.payload
             })
         default:
-            return({
-                status: ''
-            } )   
+            return{
+                state
+            }
     }
 
     
 }
+export default signIn

@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import 'src/assets/css/style.css'
-import { useDispatch } from 'react-redux'
-import {signUpAction} from 'src/redux/action'
+import { useDispatch, useSelector } from 'react-redux'
+import {signUpAction} from '../../redux/action'
 
 
 function SignUp() {
@@ -11,10 +11,15 @@ function SignUp() {
     const [lastName, setLastName] = useState();
     const [mobileNumber, setMobileNumber] = useState();
     const dispatch = useDispatch();
+    const response= useSelector(state => state.signIn)
 
     const call =async (request) => {
-        dispatch(await signUpAction(request))
+        dispatch(await signUpAction())
     }
+
+    useEffect(()=>{
+        console.log(response)
+    },[response])
 
     const handleSubmit = () => {
         let request = {

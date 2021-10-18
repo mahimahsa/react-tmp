@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Route, Redirect, Link } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
-import { getInfo , clearLogin} from '../reduxapp/actions'
+//import { getInfo , clearLogin} from '../reduxapp/actions'
 import Layout from 'src/components/Layout'
 function PrivateRoute({ component: Component, ...rest }) {
 

@@ -6,7 +6,8 @@ import { Route, Switch, Redirect } from 'react-router-dom'
 // import Login from '../pages/Login'
 // import NotFound from '../pages/NotFound'
 // const PinActivation = loadable(() => import('src/pages/modern/PinActivation'))
-import SignUp from 'src/Pages/SignUp'
+
+import SignUp from '../pages/SignUp'
 
 
 
